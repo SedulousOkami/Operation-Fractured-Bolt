@@ -70,7 +70,7 @@
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-semibold text-blue-800 mb-3">The Pretext: A Greater Norway</h3>
+                        <h3 class="text-xl font-semibold text-red-800 mb-3">The Pretext: A Greater Norway</h3>
                         <p class="text-slate-600">
                             The political junta cites ancient territorial claims related to the dissolution of the Kalmar Union to justify their aggression against Denmark, Sweden, and Finland.
                             <br><br>
@@ -160,7 +160,7 @@
                 <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
                     <h2 class="text-2xl font-bold text-slate-900 mb-4">Strategic Theater: The Baltic Choke Point</h2>
                     <p class="text-base md:text-lg text-slate-700 leading-relaxed">
-                        The operation hinges on controlling a single, narrow geographic feature: the Danish straits. The image below provides a visual overview of the aggressor forces and the resulting choke point, which completely isolates NATO allies in the Baltic Sea.
+                        The operation hinges on controlling a single, narrow geographic feature: Drakovac. The image below provides a visual overview of the aggressor forces and the resulting choke point, which completely isolates NATO allies in the Baltic Sea.
                     </p>
                 </div>
 
@@ -246,29 +246,29 @@
                         {
                             label: 'Infantry / Crews',
                             data: [12, 0, 0], // Increased to reflect primary aggressor status
-                            backgroundColor: 'rgba(220, 38, 38, 0.7)',
-                            borderColor: 'rgba(220, 38, 38, 1)',
+                            backgroundColor: 'rgba(19, 87, 11, 0.68)',
+                            borderColor: 'rgba(0, 0, 0, 0.38)',
                             borderWidth: 1
                         },
                         {
                             label: 'Logistics / Fuel',
                             data: [5, 10, 0], // Adjusted: Norway needs some logistics, Russia maintains massive supply
-                            backgroundColor: 'rgba(153, 27, 27, 0.7)',
-                            borderColor: 'rgba(153, 27, 27, 1)',
+                            backgroundColor: 'rgba(204, 205, 68, 0.9)',
+                            borderColor: 'rgba(0, 0, 0, 0.38)',
                             borderWidth: 1
                         },
                         {
                             label: 'Naval Denial',
                             data: [4, 8, 0], // Adjusted: Norway contributes coastal defense, Russia handles high-level area denial.
-                            backgroundColor: 'rgba(127, 29, 29, 0.7)',
-                            borderColor: 'rgba(127, 29, 29, 1)',
+                            backgroundColor: 'rgba(42, 78, 189, 0.9)',
+                            borderColor: 'rgba(0, 0, 0, 0.38)',
                             borderWidth: 1
                         },
                         {
                             label: 'Armor (Supply)',
                             data: [0, 0, 10],
-                            backgroundColor: 'rgba(249, 115, 22, 0.7)',
-                            borderColor: 'rgba(249, 115, 22, 1)',
+                            backgroundColor: 'rgba(193, 135, 0, 0.9)',
+                            borderColor: 'rgba(0, 0, 0, 0.38)',
                             borderWidth: 1
                         }
                     ]
@@ -296,27 +296,6 @@
                         legend: {
                             position: 'bottom',
                         },
-                        tooltip: {
-                            mode: 'index',
-                            intersect: false,
-                            callbacks: {
-                                title: function(tooltipItems) {
-                                    return tooltipItems[0].label;
-                                },
-                                label: function(tooltipItem) {
-                                    const datasetLabel = tooltipItem.dataset.label || '';
-                                    const value = tooltipItem.raw;
-                                    if (value > 0) {
-                                        let role = datasetLabel;
-                                        if (value >= 10) role += ': Major';
-                                        else if (value >= 5) role += ': Significant';
-                                        else role += ': Moderate';
-                                        return ` ${role}`;
-                                    }
-                                    return null;
-                                }
-                            }
-                        }
                     }
                 }
             });
