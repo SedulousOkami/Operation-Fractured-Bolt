@@ -8,22 +8,22 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Base Dark Mode Styling */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111827;
-            color: #e5e7eb;
+            background-color: #111827; /* Dark Slate Background */
+            color: #e5e7eb; /* Light Gray Text */
         }
         .card-bg {
-            background-color: #1f2937;
+            background-color: #1f2937; /* Slightly lighter card background */
             color: #d1d5db;
         }
         .header-text {
-            color: #f9fafb;
+            color: #f9fafb; /* White for main titles */
         }
         .tab-button {
             transition: all 0.3s ease;
             border-bottom: 3px solid transparent;
-            color: #9ca3af;
         }
         .tab-button.active {
             border-bottom-color: #3b82f6;
@@ -238,6 +238,17 @@
             const tabs = document.querySelectorAll('[data-tab-target]');
             const tabContents = document.querySelectorAll('[data-tab-content]');
 
+            // Initial state: ensure only the first tab is visible and active
+            const initialTab = document.querySelector('[data-tab-target="overview"]');
+            const initialContent = document.getElementById('overview');
+            if (initialTab) {
+                // Initial styling for the active tab is handled by the .active CSS class
+                initialTab.classList.add('active');
+            }
+            if (initialContent) {
+                initialContent.classList.remove('hidden');
+            }
+
             tabs.forEach(tab => {
                 tab.addEventListener('click', () => {
                     const target = document.getElementById(tab.dataset.tabTarget);
@@ -247,12 +258,10 @@
                     });
                     
                     tabs.forEach(t => {
-                        t.classList.remove('active', 'text-blue-900', 'border-blue-600');
-                        t.classList.add('text-slate-600', 'hover:text-blue-700');
+                        t.classList.remove('active');
                     });
 
-                    tab.classList.add('active', 'text-blue-900', 'border-blue-600');
-                    tab.classList.remove('text-slate-600', 'hover:text-blue-700');
+                    tab.classList.add('active');
                     target.classList.remove('hidden');
                 });
             });
@@ -329,6 +338,7 @@
 </body>
 
 </html>
+
 
 
 
