@@ -147,18 +147,24 @@
                 <div>
                     <h3 class="text-2xl font-bold text-red-500 mb-4 text-center">Aggressor: Tripartite Coalition</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                         <!-- Norwegian Army Card -->
                         <div class="card-bg p-6 rounded-lg shadow-x1 border-t-4 border-red-600 flex flex-col items-center">
                             <h4 class="text-xl font-bold mb-2">Norwegian Army</h4>
                             <p class="font-semibold text-red-500 mb-2">Role: Ground Force, Air Force & Crews</p>
                             <img src="Norway.png" class="mb-4">
                             <p class="text-gray-400">Provides the vast majority of personnel, high-mobility infantry, and all operational crews for heavy armor. Objective: permanent annexation of seized territories in Denmark and gains against Sweden/Finland.</p>
                         </div>
+                        
+                         <!-- Russian Card -->
                         <div class="card-bg p-6 rounded-lg shadow-x1 border-t-4 border-red-600 flex flex-col items-center">
                             <h4 class="text-xl font-bold mb-2">Russian Federation</h4>
                             <p class="font-semibold text-red-500 mb-2">Role: Strategic Enabler</p>
                             <img src="Russia.png" class="mb-4">
                             <p class="text-gray-400">Supplies crucial fuel and heavy transport via northern routes. Uses naval assets from Kaliningrad for sea denial and Anti-Access/Area Denial in the southern Baltic.</p>
                         </div>
+                        
+                         <!-- UK Separatist Card -->
                         <div class="card-bg p-6 rounded-lg shadow-x1 border-t-4 border-red-600 flex flex-col items-center">
                             <h4 class="text-xl font-bold mb-2">UK Separatist Faction</h4>
                             <p class="font-semibold text-red-500 mb-2">Role: Armored Supplier</p>
@@ -210,18 +216,24 @@
                 <div>
                     <h3 class="text-2xl font-bold text-blue-500 mb-4 text-center">Operation Fractured Bolt</h3>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                         <!-- 17th Card -->
                         <div class="card-bg p-6 rounded-lg shadow-x1 border-t-4 border-blue-600 flex flex-col items-center">
                             <h4 class="text-xl font-bold header-text mb-2">17th Ranger Battalion</h4>
                             <p class="font-semibold text-blue-500 mb-2">Role: Spearhead</p>
                             <img src="17th.png" class="mb-4">
                             <p class="text-gray-400">The 17th Ranger Battalion lead the assault, specializing in fast-moving, high-risk combined-arms combat. Their initial mission is the amphibious landing at Drakovac and subsequent campaign to dislodge entrenched Norwegian forces.</p>
                         </div>
+                        
+                         <!-- German Division Card -->
                         <div class="card-bg p-6 rounded-lg shadow-x1 border-t-4 border-blue-600 flex flex-col items-center">
                             <h4 class="text-xl font-bold header-text mb-2">Division Schnelle Kräfte</h4>
                             <p class="font-semibold text-blue-500 mb-2">Role: Rapid Support and QRF</p>
                             <img src="PSI.png" class="mb-4">
                             <p class="text-gray-400">A contingent from the German Division Schnelle Kräfte (Rapid Forces Division) will provide the vital QRF support directly under the 17th Ranger Battalion.</p>
                         </div>
+                        
+                         <!-- 9th Card -->
                         <div class="card-bg p-6 rounded-lg shadow-x1 border-t-4 border-blue-600 flex flex-col items-center">
                             <h4 class="text-xl font-bold header-text mb-2">9th Air Commando Group</h4>
                             <p class="font-semibold text-blue-500 mb-2">Role: General Support</p>
@@ -279,21 +291,21 @@
                     datasets: [
                         {
                             label: 'Infantry / Crews',
-                            data: [12, 0, 0], // Increased to reflect primary aggressor status
+                            data: [12, 0, 0],
                             backgroundColor: 'rgba(160, 207, 128, 0.85)',
                             borderColor: 'rgba(0, 0, 0, 0.38)',
                             borderWidth: 1
                         },
                         {
                             label: 'Logistics / Fuel',
-                            data: [5, 10, 0], // Adjusted: Norway needs some logistics, Russia maintains massive supply
+                            data: [5, 10, 0],
                             backgroundColor: 'rgba(227, 255, 75, 0.85)',
                             borderColor: 'rgba(0, 0, 0, 0.38)',
                             borderWidth: 1
                         },
                         {
                             label: 'Naval Denial',
-                            data: [4, 8, 0], // Adjusted: Norway contributes coastal defense, Russia handles high-level area denial.
+                            data: [4, 8, 0],
                             backgroundColor: 'rgba(75, 122, 255, 0.85)',
                             borderColor: 'rgba(0, 0, 0, 0.38)',
                             borderWidth: 1
@@ -326,42 +338,20 @@
                             }
                         }
                     },
-                    plugins: {
+                     plugins: {
                         legend: {
                             position: 'bottom',
+                            labels: {
+                                color: '#d1d5db'
+                            }
                         },
+                        tooltip: {
+                            enabled: false
+                        }
                     }
                 }
             });
         });
     </script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
