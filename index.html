@@ -184,8 +184,9 @@
             </div>
 
             <!-- Tab 3: Strategic Theater -->
-            <div id="theater" data-tab-content class="hidden space-y-8 flex justify-center">
-                <div class="max-w-6xl w-full space-y-8 card-bg p-6 md:p-8 rounded-lg shadow-x1">
+            <div id="theater" data-tab-content class="hidden space-y-8">
+                <!-- Introduction Card -->
+                <div class="card-bg p-6 md:p-8 rounded-lg shadow-xl mx-auto max-w-6xl">
                     <h2 class="text-2xl font-bold header-text mb-4">Strategic Theater: The Baltic Choke Point</h2>
                     <p class="text-base md:text-lg text-gray-400 leading-relaxed">
                         The operation hinges on controlling a single, narrow geographic feature: Drakovac. The image below provides a visual overview of the aggressor forces and the resulting choke point, which completely isolates NATO allies in the Baltic Sea.
@@ -193,21 +194,18 @@
                 </div>
 
                     <!-- STRATEGIC MAP IMAGE CONTAINER -->
-                    <div class="card-bg p-4 md:p-6 rounded-lg shadow-xl flex justify-center">
-                        <!-- 
-                            Recommended Classes:
-                            w-full: takes up 100% of the card's width
-                            max-w-4xl: prevents image from getting too wide on HUGE screens (up to 56rem)
-                          -->
+                    <div class="card-bg p-4 md:p-6 rounded-lg shadow-xl mx-auto max-w-6xl">
+                    <div class="flex items-center justify-center">
                         <img 
                             src="Strategic Map.png" 
                             alt="Strategic Map of Baltic Chokepoint and Forces" 
                             class="w-full max-w-4xl h-auto rounded-md shadow-lg"
-                         >
-                     </div>
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x450/374151/9ca3af?text=MAP+PLACEHOLDER'"
+                        >
+                    </div>
                 </div>
             </div>
-
+            
             <!-- Tab 4: NATO Response -->
             <div id="response" data-tab-content class="hidden space-y-8">
                 <div class="card-bg p-6 md:p-8 rounded-lg shadow-x1">
@@ -359,6 +357,7 @@
     </script>
 </body>
 </html>
+
 
 
 
