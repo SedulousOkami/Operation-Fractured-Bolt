@@ -258,6 +258,10 @@
 
             // Initialize Chart.js
             const ctx = document.getElementById('factionChart').getContext('2d');
+            
+            Chart.defaults.color = '#d1d5db'; // Text color for chart labels/titles
+            Chart.defaults.borderColor = '#4b5563'; // Grid line color
+            
             const factionChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -324,6 +328,7 @@
 </body>
 
 </html>
+
 
 
 
